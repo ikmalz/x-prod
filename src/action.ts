@@ -233,5 +233,4 @@ export const addPost = async (_prevState: { success: boolean, error: boolean }, 
         console.log(err)
         return { success: false, error: true }
     }
-    return { success: false, error: true }
 }
