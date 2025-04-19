@@ -20,8 +20,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,  // Pastikan ini ada
-    tsconfigPath: './tsconfig.json'  // Tambahkan ini
+    ignoreBuildErrors: true,
   },
   // Untuk memastikan cache tidak menyebabkan masalah
   webpack: (config) => {
