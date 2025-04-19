@@ -1,6 +1,8 @@
+import { imageKit } from "@/utils"
 import Image from "./image"
 import PostInfo from "./PostInfo"
 import PostInteractions from "./PostInteractions"
+import Video from "./Video"
 import Link from "next/link"
 import { Post as PostType } from "@prisma/client"
 import { format } from "timeago.js"

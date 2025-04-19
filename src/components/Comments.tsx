@@ -23,7 +23,7 @@ const Comments = ({
         username: string
     }) => {
 
-    const { isLoaded: _isLoaded, isSignedIn: _isSignedIn, user } = useUser()
+    const { isLoaded, isSignedIn, user } = useUser()
 
     const [state, formAction, isPending] = useActionState(addComment, { success: false, error: false })
 

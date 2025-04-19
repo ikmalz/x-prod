@@ -4,6 +4,7 @@ import { auth } from "@clerk/nextjs/server"
 import { prisma } from "./prisma"
 import { z } from "zod"
 import { revalidatePath } from "next/cache"
+import { resolve } from "path"
 import { UploadResponse } from "imagekit/dist/libs/interfaces"
 import { imageKit } from "./utils"
 
@@ -100,7 +101,7 @@ export const savePost = async (postId: number) => {
     }
 };
 
-export const addComment = async (_prevState: { success: boolean, error: boolean }, formData: FormData) => {
+export const addComment = async (prevState: { success: boolean, error: boolean }, formData: FormData) => {
 
     const { userId } = await auth()
 
@@ -140,7 +141,7 @@ export const addComment = async (_prevState: { success: boolean, error: boolean 
     }
 };
 
-export const addPost = async (_prevState: { success: boolean, error: boolean }, formData: FormData) => {
+export const addPost = async (prevState: { success: boolean, error: boolean }, formData: FormData) => {
 
     const { userId } = await auth()
 
@@ -233,4 +234,5 @@ export const addPost = async (_prevState: { success: boolean, error: boolean }, 
         console.log(err)
         return { success: false, error: true }
     }
+    return { success: false, error: true }
 }
