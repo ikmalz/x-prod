@@ -100,7 +100,7 @@ export const savePost = async (postId: number) => {
     }
 };
 
-export const addComment = async (prevState: { success: boolean, error: boolean }, formData: FormData) => {
+export const addComment = async (_prevState: { success: boolean, error: boolean }, formData: FormData) => {
 
     const { userId } = await auth()
 
@@ -140,7 +140,7 @@ export const addComment = async (prevState: { success: boolean, error: boolean }
     }
 };
 
-export const addPost = async (prevState: { success: boolean, error: boolean }, formData: FormData) => {
+export const addPost = async (_prevState: { success: boolean, error: boolean }, formData: FormData) => {
 
     const { userId } = await auth()
 
